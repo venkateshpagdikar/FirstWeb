@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///C:/Users/IS12/Downloads/13feb.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+</head>
+
+<body>html{
+  scroll-behaviour: smooth;
+  }
+
+
+  <title>W3.CSS Template</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./13feb_files/w3.css">
+  <link rel="stylesheet" href="./13feb_files/css">
+  <link rel="stylesheet" href="./13feb_files/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    .glow-on-hover {
+      width: 220px;
+      height: 50px;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+      color: #000
+    }
+
+    .glow-on-hover:active:after {
+      background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+      opacity: 1;
+    }
+
+    .glow-on-hover:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+  </style>
+
+
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="file:///C:/Users/IS12/Documents/25may.html#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="file:///C:/Users/IS12/Documents/25may.html#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BIO</a>
+      <a href="file:///C:/Users/IS12/Documents/25may.html#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+      <a href="file:///C:/Users/IS12/Documents/25may.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="file:///C:/Users/IS12/Documents/25may.html#" class="w3-bar-item w3-button">Merchandise</a>
+          <a href="file:///C:/Users/IS12/Documents/25may.html#" class="w3-bar-item w3-button">Extras</a>
+          <a href="file:///C:/Users/IS12/Documents/25may.html#" class="w3-bar-item w3-button">Media</a>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="file:///C:/Users/IS12/Documents/25may.html#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+    <a href="file:///C:/Users/IS12/Documents/25may.html#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+    <a href="file:///C:/Users/IS12/Documents/25may.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+    <a href="file:///C:/Users/IS12/Documents/25may.html#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides w3-display-container w3-center" style="display: none;">
+      <img src="./13feb_files/tumblr_ml5vp2PnP71roq9eno1_500.gif" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>Naruto</h3>
+        <p><b>Watched the most rated anime this year......</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center" style="display: block;">
+      <img src="./13feb_files/tenor.gif" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>New York</h3>
+        <p><b>The atmosphere in New York is lorem ipsum.</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center" style="display: none;">
+      <img src="./13feb_files/fa9cac90dfc02d092faaa6f2d6f193d1.gif" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>Chicago</h3>
+        <p><b>Thank you, Chicago - A night we won't forget.</b></p>
+      </div>
+    </div>
+
+    <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <h2 class="w3-wide">Uchicha Clan</h2>
+      <p class="w3-opacity"><i>We love music</i></p>
+      <p class="w3-justify">The Uchiha were one of the most powerful and feared clans in the Narutoverse. They, along
+        with the Senju Clan, helped forge and create the standard village system seen today after creating The Hidden
+        Leaf Village. The clan was wiped out after conspiring to overthrow the village and only a few members still live
+        today.</p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-third">
+          <p>Saske</p>
+          <img src="./13feb_files/OIP.fGELGh86IRkVIgoTogQ3-QHaEK" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        </div>
+        <div class="w3-third">
+          <p>Madara</p>
+          <img src="data:image/jpeg;base64,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" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        </div>
+        <div class="w3-third">
+          <p>Obito</p>
+          <img src="./13feb_files/R.cb4c248ec607d862bf5bd76f751287e0" class="w3-round" alt="Random Name" style="width:60%">
+        </div>
+      </div>
+    </div>
+
+    <!-- frg -->
+    <div class="w3-black" id="tour">
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h2 class="w3-wide w3-center">The Ability of Uchichas</h2>
+
+
+        <ul class="w3-ul w3-border w3-white w3-text-grey">
+          <li class="w3-padding">Saske : <span class="w3-tag w3-margin-left">Chidoriii</span></li>
+          <li class="w3-padding">Madara : <span class="w3-tag w3-margin-left">God Power</span></li>
+          <li class="w3-padding">Obito : <span class="w3-tag w3-margin-left">Ten Tailed</span></li>
+        </ul>
+
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+          <div class="w3-third w3-margin-bottom">
+            <img src="./13feb_files/tumblr_ohkcjzpl6X1tquy17o1_500.gif" alt="Sasuke" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Sasuke</b></p>
+              <p class="w3-opacity">Sat 28 Nov 2016</p>
+              <p>Sasuke Uchiha,is a fictional character in the Naruto manga and anime franchise created by Masashi
+                Kishimoto. Sasuke belongs to the Uchiha clan, a notorious ninja family, and one of the most powerful,
+                allied with Konohagakure.</p>
+              <button class="glow-on-hover" type="button">Watch Video</button>
+            </div>
+          </div>
+          <div class="w3-third w3-margin-bottom">
+            <img src="./13feb_files/a3b444befd8751b642ae81cb4a1cd96c.gif" alt="Madara" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Madara</b></p>
+              <p class="w3-opacity">Sat 28 Nov 2016</p>
+              <p>Madara Uchiha was the legendary leader of the Uchiha Clan. He founded Konohagakure alongside his
+                childhood friend and rival, Hashirama Senju, with the intention of bringing about an era of peace. When
+                the two couldn't agree on how to achieve that peace, they fought for control of the village. </p>
+              <button class="glow-on-hover" type="button">Watch Video</button>
+            </div>
+          </div>
+          <div class="w3-third w3-margin-bottom">
+            <img src="./13feb_files/e0081875822dceeca481bf014ce53b29cb2e58d7_hq.gif" alt="Obito" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Obito</b></p>
+              <p class="w3-opacity">Sat 28 Nov 2016</p>
+              <p>Obito Uchiha was a member of Konohagakure's Uchiha clan. He was believed to have died during the Third
+                Shinobi World War, his only surviving legacy being the Sharingan he gave to his teammate, Kakashi
+                Hatake. In truth, Obito was saved from death and trained by Madara.</p>
+              <button class="glow-on-hover" type="button">Watch Video</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ticket Modal     onclick="document.getElementById('ticketModal')-->
+    <div id="ticketModal" class="w3-modal">
+      <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container w3-teal w3-center w3-padding-32">
+          <span onclick="document.getElementById(&#39;ticketModal&#39;).style.display=&#39;none&#39;" class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+          <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+        </header>
+        <div class="w3-container">
+          <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+          <input class="w3-input w3-border" type="text" placeholder="How many?">
+          <p><label><i class="fa fa-user"></i> Send To</label></p>
+          <input class="w3-input w3-border" type="text" placeholder="Enter email">
+          <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+          <button class="glow-on-hover" type="button">Watch Video</button>
+          <p class="w3-right">Need <a href="file:///C:/Users/IS12/Documents/25may.html#" class="w3-text-blue">help?</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Contact Section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+      <h2 class="w3-wide w3-center">CONTACT</h2>
+      <p class="w3-opacity w3-center"><i>Comment down your Fav!</i></p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> Gulbarga, India<br>
+          <i class="fa fa-phone" style="width:30px"></i> Phone: 91+ 9945244332<br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: venkateshpagdikar8@mail.com<br>
+        </div>
+        <div class="w3-col m6">
+          <form action="file:///C:/action_page.php" target="_blank">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required="" name="Name">
+              </div>
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required="" name="Email">
+              </div>
+            </div>
+            <input class="w3-input w3-border" type="text" placeholder="Message" required="" name="Message">
+            <div> </div>
+            <button class="glow-on-hover" type="button">SEND</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Page Content -->
+  </div>
+
+  <!-- Image of location/map -->
+  <img src="file:///C:/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <i class="fa fa-Github-p w3-hover-opacity"></i>
+
+  </footer>
+
+  <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+
+
+</body></html>
